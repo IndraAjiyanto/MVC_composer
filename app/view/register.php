@@ -6,6 +6,6 @@
     <title>Registrasi</title>
 </head>
 <body>
-    
+<h1>register</h1>
 </body>
 </html>
