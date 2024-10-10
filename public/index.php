@@ -1,9 +1,11 @@
 <?php
 
-$path = "/index";
+require_once "../vendor/autoload.php";
 
-if(isset($_SERVER['PATH_INFO'])){
-    $path = $_SERVER['PATH_INFO'];
-}
+use Indra\Mvc\App\Router;
 
-require_once "../app/view/".$path.".php";
+Router::add('GET', '/index.php', "HomeController", "index");
+Router::add('GET', '/login', "HomeController", "login");
+Router::add('GET', '/register', "HomeController", "register");
+
+Router::run();
